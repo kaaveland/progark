@@ -2,25 +2,320 @@
 %	TableShading is on
 %	Template style
 
-
-\begin{table}[h]
+\begin{table}[H]
 	\resizebox{\textwidth}{!}{
 	\rowcolors{0}{white}{tableShade}
 	\begin{tabular}{p{5cm} | p{12cm}}
     	\hline
-		\textbf{ID:} 			& 	\textbf{FR1} 														\\ 
+		\textbf{ID:} 			& 	\textbf{FR1} 												 \\ 
 		\hline
     	
-		\textbf{Priority:}		&	High/Medium/Low														\\
-		\textbf{Description}	& 	While the user is in a conversation, the app 
-									should check for any new messages from this 
-									specific contact every 10 seconds. 	\\ 
-		\textbf{Rationale}		& 	While the user is in a conversation, the app 
-									should check for any new messages from this 
-									specific contact every 10 seconds. 	\\
+		\textbf{Priority:}		&	High														 \\
+		\textbf{Description}	& 	The game will run on Xbox 360								 \\ 
+		\textbf{Rationale}		& 	Please see chapter \ref{contstraints}						 \\
 		\hline
     \end{tabular}
 	\label{tab:functional1}}
-	\caption{Funcional Requirement 1}
+	\caption{FR1}
 \end{table}
 
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR2} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	The game is multiplayer. It shall support minimum two  
+									players, and maximum 4 players								\\ 
+		\textbf{Rationale}		& 	The project assignment states that the game must be 
+		 							multiplayer. The Xbox 360 natively supports 4 controllers
+									wirelessly. The console supports a maximum of 7 controllers,
+									where three controllers are wired. We have landed on the 
+									conclusion to support 4, so all can play wirelessly \\
+		\hline
+    \end{tabular}
+	\label{tab:functional2}}
+	\caption{FR2}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR3} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	The game must support pausing and unpausing.				\\ 
+		\textbf{Rationale}		& 	In order to meet the conceptual model of a gamer,
+		 							we must have this feature\\
+		\hline
+    \end{tabular}
+	\label{tab:functional3}}
+	\caption{FR3}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR4} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	The game is in 2D											\\ 
+		\textbf{Rationale}		& 	To ensure focus on architecture								\\
+		\hline
+    \end{tabular}
+	\label{tab:functional4}}
+	\caption{FR4}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR5} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	The game must be able to \emph{spawn} creeps				\\ 
+		\textbf{Rationale}		& 	To provide challenge for the player							\\
+		\hline
+    \end{tabular}
+	\label{tab:functional5}}
+	\caption{FR5}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR6} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	Each player controls a \emph{hero}							\\ 
+		\textbf{Rationale}		& 	To provide challenge for the player							\\
+		\hline
+    \end{tabular}
+	\label{tab:functional6}}
+	\caption{FR6}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR7} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	Creeps attack either a hero or the structure to be defended	\\ 
+		\textbf{Rationale}		& 	To provide challenge for the player							\\
+		\hline
+    \end{tabular}
+	\label{tab:functional7}}
+	\caption{FR7}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR8} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	Medium														\\
+		\textbf{Description}	& 	A player cannot attack another player						\\ 
+		\textbf{Rationale}		& 	The game is cooperative										\\
+		\hline
+    \end{tabular}
+	\label{tab:functional8}}
+	\caption{FR8}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR9} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	A hero / player have a limited amount of health	and resource\\ 
+		\textbf{Rationale}		& 	The game is cooperative, and adding depth to the game		\\
+		\hline
+    \end{tabular}
+	\label{tab:functional9}}
+	\caption{FR9}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR10} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	A hero gets experience points and resources for killing creeps \\ 
+		\textbf{Rationale}		& 	To make the game more challenging and adding depth				\\
+		\hline
+    \end{tabular}
+	\label{tab:functional10}}
+	\caption{FR10}
+\end{table}
+
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR11} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	A hero / player have a limited amount of health				\\ 
+		\textbf{Rationale}		& 	The game is cooperative										\\
+		\hline
+    \end{tabular}
+	\label{tab:functional11}}
+	\caption{FR11}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR12} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	If a hero dies, the player must wait 30 seconds + 5 
+									seconds for each level of the hero before respawning		\\ 
+		\textbf{Rationale}		& 	The game must be challenging								\\
+		\hline
+    \end{tabular}
+	\label{tab:functional12}}
+	\caption{FR12}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR13} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High														\\
+		\textbf{Description}	& 	A hero has 4 abilities, one of them being an ultimate ability\\ 
+		\textbf{Rationale}		& 	The game must be challenging								\\
+		\hline
+    \end{tabular}
+	\label{tab:functional13}}
+	\caption{FR13}
+\end{table}
+
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR14} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High															\\
+		\textbf{Description}	& 	A hero has skills: Attack speed, health, strength, agility 
+									and intelligence\\ 
+		\textbf{Rationale}		& 	The game must be challenging										\\
+		\hline
+    \end{tabular}
+	\label{tab:functional14}}
+	\caption{FR14}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR15} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	Low															\\
+		\textbf{Description}	& 	A hero can buy items to enhance abilities or skills			\\ 
+		\textbf{Rationale}		& 	The game is cooperative										\\
+		\hline
+    \end{tabular}
+	\label{tab:functional15}}
+	\caption{FR15}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR16} 												\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	High															\\
+		\textbf{Description}	& 	A new player cannot join the game once it has started			\\ 
+		\textbf{Rationale}		& 	The game is cooperative										\\
+		\hline
+    \end{tabular}
+	\label{tab:functional16}}
+	\caption{FR16}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR17} 													\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	Medium															\\
+		\textbf{Description}	& 	Passive abilities does not need to be activated by the player	\\ 
+		\textbf{Rationale}		& 	According to the conceptual model of this genre of games		\\
+		\hline
+    \end{tabular}
+	\label{tab:functional17}}
+	\caption{FR17}
+\end{table}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{p{5cm} | p{12cm}}
+    	\hline
+		\textbf{ID:} 			& 	\textbf{FR18} 													\\ 
+		\hline
+    	
+		\textbf{Priority:}		&	Medium															\\
+		\textbf{Description}	& 	Active abilities needs to be activated by the player and has a 
+		 							\emph{cooldown} once used \\ 
+		\textbf{Rationale}		& 	According to the conceptual model of this genre of games		\\
+		\hline
+    \end{tabular}
+	\label{tab:functional18}}
+	\caption{FR18}
+\end{table}
