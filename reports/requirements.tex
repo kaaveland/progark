@@ -1,8 +1,9 @@
-\documentclass[a4paper,11pt]{article}
-
-\usepackage[utf8]{inputenc}
+\documentclass[titlepage,a4paper,11pt]{article}
 \usepackage[pdfborder={0 0 0}]{hyperref}
-
+\usepackage{fontspec}
+\usepackage[hmargin=2.54cm,vmargin=1.91cm]{geometry}
+\usepackage{parskip}
+\usepackage{wrapfig}
 % TableMagic+shading
 \usepackage{multirow}
 \usepackage[english]{babel}
@@ -15,19 +16,24 @@
 \def \project {Defense of the Guardian Gnome}
 \def \objective {guardian gnome}
 
-\author{Dag Øyvind Tornes, Sibte-Haider Syed, Robin Kåveland Hansen}
-\title{Requirement Specification for TDT4240 XNA Game Project}
+\setromanfont{Century Gothic}
+
+\date{\today}
 
 \begin{document}
+\title{Requirement Specification\\
+ 		TDT4240 - XNA Game Project}
 
+\author{Dag Øyvind Tornes\\
+ 		Sibte-Haider Syed\\ 
+		Robin Kåveland Hansen\\}
 \maketitle
-% Extra information about whatever here
 
-\clearpage
-
+\pagestyle{empty}
 \tableofcontents
-
 \clearpage
+\pagestyle{plain}
+\pagenumbering{arabic}
 
 \section{Introduction}
 \input{requirements/introduction}
@@ -59,7 +65,7 @@
 
 \section{Constraints}
 \label{constraints}
-\input{requirements/constraints}
+%\input{requirements/constraints}
 
 \section{References}
 

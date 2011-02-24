@@ -1,29 +1,40 @@
-\documentclass[a4paper,11pt]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-
+\documentclass[titlepage,a4paper,11pt]{article}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{fontspec}
+\usepackage[hmargin=2.54cm,vmargin=1.91cm]{geometry}
+\usepackage{parskip}
+\usepackage{wrapfig}
 % TableMagic+shading
 \usepackage{multirow}
+\usepackage[english]{babel}
 \usepackage{longtable}
 \usepackage{float}
+\usepackage{graphicx}
 \usepackage[table]{xcolor}
 \definecolor{tableShade}{HTML}{F1F5FA}
 
-\def \project {Insert project name}
+\def \project {Defense of the Guardian Gnome}
+\def \objective {guardian gnome}
 
-\author{Dag Øyvind Tornes, Sibte-Haider Syed, Robin Kåveland Hansen}
-\title{Architectural Specification for TDT4240 XNA Game Project}
+\setromanfont{Century Gothic}
+
+\date{\today}
 
 \begin{document}
+\title{Artitectural Description Document\\
+ 		TDT4240 - XNA Game Project}
 
+\author{Dag Øyvind Tornes\\
+ 		Sibte-Haider Syed\\ 
+		Robin Kåveland Hansen\\}
 \maketitle
-% Extra information about whatever here
 
-\clearpage
-
-
+\pagestyle{empty}
 \tableofcontents
+\clearpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+
 
 \section{Introduction}
 \input{architecture/introduction}
