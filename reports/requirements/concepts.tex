@@ -2,8 +2,8 @@ The idea behind the game is to defend an object of great value, the \objective.
 This object is continuously assailed by enemies, from here on out known as \emph{creeps}.
 Creeps are fortunately not very intelligent, and so move in certain predetermined
 paths toward the \objective, allowing players to intercept them and defeat them.
-Once the \objective is destroyed, or the last creep defeated, the game ends. If
-the \objective is still alive by the time the game ends, the players win, otherwise
+Once the \objective  is destroyed, or the last creep defeated, the game ends. If
+the \objective  is still alive by the time the game ends, the players win, otherwise
 they lose.
 
 Each player controls a \emph{hero} that defends against the creeps. Heroes gain
@@ -15,4 +15,11 @@ abilities to defeat them.
 The game takes place on one of several maps, which may have different kinds of
 obstacles that prevent the heroes and creeps from moving through them. These
 maps are two-dimensional, and they are seen from a birds-eye perspective by
-the players.
+the players. Maps are internally tiled, making them easy to build, and to treat
+as data. There can also be associated events with a map, such as waves of creeps
+appearing at certain times.
+
+Controlling heroes should be relatively easy, and difficulty should arise from
+having to combine abilities in different ways, rather than being able to
+use many abilities quickly. To facilitate this, an ability is put on a
+\emph{cooldown} once used, making it unavailable for some time. 
