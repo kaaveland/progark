@@ -2,7 +2,9 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+
 \def \project {Insert project name}
+\def \objective {diamond}
 
 \author{Dag Øyvind Tornes, Sibte-Haider Syed, Robin Kåveland Hansen}
 \title{Requirement Specification for TDT4240 XNA Game Project}
@@ -19,19 +21,11 @@
 \clearpage
 
 \section{Introduction}
-This document describes the requirements that have been developed for \project,
-a game developed for the XNA platform. It describes the functional requirements
-and thus a high-level overview of how the game should play. There are also some
-scenarios for content development that describe the quality requirements imposed
-on the system. Chapter \ref{concepts} describes the concept behind the game on
-a high level, as well as some discussion around some game design choices that
-have been made at this time or will have to be made in the future. Chapter
-\ref{funcreq} lays down the functional requirements that were decided on.
-Chapter \ref{qualreq} deals with the quality requirements in detail, as well as
-some scenarios that might be relevant for \project.
+\input{requirements/introduction}
 
 \section{Concepts and ideas}
 \label{concepts}
+\input{requirements/concepts}
 
 \section{Functional Requirements}
 \label{funcreq}
