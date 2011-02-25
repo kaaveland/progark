@@ -1,0 +1,121 @@
+The primary quality attribute for this project is modifiability, while the
+secondary one is usability. It is important to the group that it should not
+take very long for a gamer to get to grips with the game, so as to push focus
+away from learning it and onto mastering it.
+
+\subsection{Quality Requirement Listing: Modifiability}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID} & \textbf{QR1}  \\
+      \hline
+      \textbf{Source} &  Developer \\
+      \textbf{Stimulus} &  Developer wants to add hero \\
+      \textbf{Environment} &  Design time \\
+      \textbf{Artifact} & Code \\
+      \textbf{Response} & Adds code for hero \\
+      \textbf{Response Measure} & Code modification takes place only in trigger and ability code\\
+      \hline
+    \end{tabular}
+    \label{tab:quality1}}
+\end{table}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID} & \textbf{QR2}  \\
+      \hline
+      \textbf{Source} &  Developer \\
+      \textbf{Stimulus} &  Developer wants to add new game-mode\\
+      \textbf{Environment} &  Design time \\
+      \textbf{Artifact} & Code \\
+      \textbf{Response} & Adds code for new game-mode \\
+      \textbf{Response Measure} & No code modification required except in menu
+      system\\
+      \hline
+    \end{tabular}
+    \label{tab:quality2}}
+\end{table}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID} & \textbf{QR3}  \\
+      \hline
+      \textbf{Source} &  Graphical Designer \\
+      \textbf{Stimulus} &  Designer wants to change hero sprite \\
+      \textbf{Environment} &  After compile time \\
+      \textbf{Artifact} & Hero data \\
+      \textbf{Response} & Old sprite replaced with new sprite \\
+      \textbf{Response Measure} & Takes no more than 2 minutes and no
+      code modification or recompilation required \\
+      \hline
+    \end{tabular}
+    \label{tab:quality3}}
+\end{table}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID} & \textbf{QR4}  \\
+      \hline
+      \textbf{Source} &  Game Designer\\
+      \textbf{Stimulus} &  Game Designer wants to adjust unbalanced hero\\
+      \textbf{Environment} &  After compile time \\
+      \textbf{Artifact} & Hero data \\
+      \textbf{Response} & Hero damage and other stats adjusted \\
+      \textbf{Response Measure} & Game ready to test new hero stats without
+      requiring code modification or recompilation \\
+      \hline
+    \end{tabular}
+    \label{tab:quality4}}
+\end{table}
+
+\subsection{Quality Requirement Listing: Usability}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID} & \textbf{QR5}  \\
+      \hline
+      \textbf{Source} &  Player \\
+      \textbf{Stimulus} &  Player wants to learn game \\
+      \textbf{Environment} &  Runtime \\
+      \textbf{Artifact} & Game \\
+      \textbf{Response} & Game starts and player plays \\
+      \textbf{Response Measure} & It takes no longer than 3 minutes before
+      the player is able to control and attack with the hero \\
+      \hline
+    \end{tabular}
+    \label{tab:quality5}}
+\end{table}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID} & \textbf{QR6}  \\
+      \hline
+      \textbf{Source} &  Players \\
+      \textbf{Stimulus} &  2 or more players want to play multiplayer \\
+      \textbf{Environment} &  Runtime \\
+      \textbf{Artifact} & Menusystem \\
+      \textbf{Response} & Game starts multiplayer mode \\
+      \textbf{Response Measure} & It takes less than 5 keypresses per
+      player to get started. \\
+      \hline
+    \end{tabular}
+    \label{tab:quality6}}
+\end{table}
