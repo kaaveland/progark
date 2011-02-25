@@ -1,0 +1,48 @@
+\subsection{Availability Tactics}
+\begin{itemize}
+	\item Handle battery failure of Xbox-controller by pausing game and
+	allowing resuming later.
+\end{itemize}
+
+\subsection{Modifiability Tactics}
+\begin{itemize}
+	\item The architecture should be as modular as possible, with 	
+	the responsibilities of each module clearly delineated.  This should
+	localize changes to the system to the greatest possible degree.
+	\item By using a data-driven approach, the architecture should be well
+	suited for fast changes.
+	\item Component-based game logic.  Each entity in the game, be it the
+	player or a puff of smoke, should be made up from small components with
+	clear responsibilities.  This should allow quick changes to gameplay at
+	a late date, and allow us to add new functionality without affecting
+	existing code.
+\end{itemize}
+
+\subsection{Usability Tactics}
+\begin{itemize}
+	\item The game should have a clean and simple graphical style, and should
+	not confuse the player with needless complexity.
+	\item The interface should follow Microsofts UI-guidelines as much as 
+	possible.
+	\item By using the Model-View-Controller pattern we hope to achieve a 
+	simple architecture to drive the application.
+\end{itemize}
+
+\subsection{Performance Tactics}
+\begin{itemize}
+	\item Profile then optimize.
+	\item Decouple rendering and game logic.
+\end{itemize}
+
+\subsection{Security Tactics}
+\begin{itemize}
+	\item Not relevant to this project
+	\item Non-networked games can be considered "trusted"
+\end{itemize}
+
+\subsection{Testability tactics}
+\begin{itemize}
+	\item The game should monitor internal state, and allow reporting this
+	in a debug-mode for developers.
+	\item Unit-tests should be employed as extensively as possible
+\end{itemize}
