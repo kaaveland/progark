@@ -1,4 +1,29 @@
-The Model View Controller pattern (MVC) is a way of dividing the application / system into 
+\subsection{Model View Controller}
+The Model View Controller pattern (MVC) is a way of dividing an application
+into clear and separated responsibilities. MVC is not perfectly suited to 
+games, but we will be using some of the ideas behind it to achieve modularity.
 
-TODO: Architectural Pattern, pro cons MVC... skal vi ha MVC? 
+The problem with using MVC in a game is that views, i.e. a camera, are closely
+related to the game itself, which represents the model.  Controller is also 
+not easily fitted in this particular game, due to the way XNA handles IO.
 
+Our solution is to separate out as much of the view as possible in a separate
+renderer module.  This will need some knowledge of the game, but we hope to 
+minimize this by creating general methods which may be applied in several 
+contexts.
+
+\subsection{Event-driven programming}
+While event-driven programming is not strictly a pattern, it is such a big 
+part of our architecture we feel it should be mentioned here.
+
+The thinking behind our version of this is to split functionality in the game
+into small components which know how to handle a small set of events, and 
+achieving more complex features through interaction between these components.
+
+\subsection{Component-based entities}
+Entities are anything and everything which appears in-game.  This includes the
+player, creeps and the level.  We hope to make these parts as interchangeable 
+as possible by using a component-based system for entities.  The idea is that
+functionality can be composed of small reusable components which can interact.
+This is the approach taken in Unity, one of the most popular game-engines for 
+the Windows and Mac platforms.
