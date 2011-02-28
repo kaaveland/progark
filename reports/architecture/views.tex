@@ -1,6 +1,12 @@
 \subsection{Logical View}
 
-% insert box and arrow diagram
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.75]{graphics/DataManagementView}
+	\end{center}
+        \caption{Box and arrow diagram of game classes}
+\end{figure}
+
 The box and arrow diagram shows which modules and components that will be
 used to implement the design. XNA assumes a Game class as the entry point of
 the application, so this will be where everything starts. Aside from that,
@@ -36,7 +42,14 @@ they are so inclined.
 Movable, collidable objects are Entities. Heros and creeps are subclasses
 of this class, as is Particle, which has a slightly different behaviour.
 \subsection{Process View}
-% insert sequence diagrams
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.75]{graphics/GameRendersToScreen}
+	\end{center}
+        \caption{Game renders to screen}
+\end{figure}
+
 We have chosen to include 3 sequence diagrams that show the interactions between
 components in some illustrative situations here. The first one shows how Rendering
 of ingame objects takes place. The Game wants to render to screen, and so it
@@ -48,6 +61,13 @@ renderable objects, and tells them to render with the Renderer that was passed
 down the call-chain. These then give the Renderer information about where they
 are, and the Renderer does the rest.
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.75]{graphics/GameSpawnsCreep}
+	\end{center}
+        \caption{Game spawns creep}
+\end{figure}
+
 The second one shows how creeps are spawned. At some point, a SpawnCreep event
 was added to the EventQueue (Probably by the Level), and this event should now
 be triggered as discovered by the EventQueue. Ingame polls the EventQueue,
@@ -55,6 +75,14 @@ and gets this event in return. It asks the DataManager for information about thi
 creep, and the DataManager discovers that it hasn't loaded this creep type yet, so
 it has to fetch the data from the storage system. Once this is done, it
 creates an instance of the creep type and sends it back to Ingame.
+
+\subsection{Player Shoots}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.75]{graphics/PlayerShoots}
+	\end{center}
+        \caption{Player shoots}
+\end{figure}
 
 The third one details what happens when a player shoots. The essential of the
 situation is that a player checks its input, and finds the shoot button to be
@@ -66,5 +94,19 @@ to update health and draw a nice explosion or something similar.
 
 \subsection{Scenarios}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.75]{graphics/scenario_1_StartingGame}
+	\end{center}
+        \caption{Game is started}
+\end{figure}
+
 Scenario 1 details which components that interact when a game is started. Scenario
 2 details what takes place once a player dies, and achieves a new highscore.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.75]{graphics/scenario_2_PlayerDiesHighScore}
+	\end{center}
+        \caption{Player dies, and achieves a highscore}
+\end{figure}
