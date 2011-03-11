@@ -4,11 +4,17 @@
 	\begin{center}
 		\begin{tabular}{| c | c | c | c |}
     		\hline
-			\textbf{Attribute}		&	\textbf{Scenario} 	&   \textbf{Priority} 	& \textbf{Details} 			\\															
+                % TODO: Prettify - details go over multiple lines
+		        \textbf{Attribute}		&	\textbf{Scenario} 	&   \textbf{Priority} 	& \textbf{Details} 			\\															
 			\hline
-			%THIS IS AN EXAMPLE
-			Performance				& 	Data Latency		& 	(M,L)				& DB storage time < 5 min	\\
-			Modifiability			&	Change COTS			& 	(M,L)				& Add CORBA within 2 Person months \\
+			Modifiability			& 	Clean Code		& 	(H,L)			& x\% of code coverage with comments. 	\\
+			Modifiability			&	Coding Convention	& 	(M,M)			& y\% of possible score with checkstyle or similar. \\
+                        Modifiability & Adding NPC & (H,L) & It should not take more than x lines of code to add a new NPC. \\
+                        Modifiability & Code modularity & (H,H) & Changing game features should not affect more than z call sites. \\
+                        Modifiability & Easily changeable UI & (M,M) & Changing color theme of UI should not take more than 3 hours. \\
+                        Usability & Maximum number of screen options & (H,L) & Any option screen should contain at most x options. \\
+                        Usability & Complexity of game & (H,L) & Takes less than x clicks to get a game instance running. \\
+                        Usability & Understandability & (H,L) & Takes less than 3 minutes for player to know all controls. \\
 			\hline
     	\end{tabular}
 	\end{center}
