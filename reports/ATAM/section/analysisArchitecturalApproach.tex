@@ -1,25 +1,83 @@
+Not all scenarios were included in this section, as some of the scenarios do not directly interact with
+architectural decisions, but are rather more similar to a mission statement.
+Following a coding standard such as CheckStyle should be possible with more or less
+any architecture, for example. The most impacting scenario is clearly Code modularity (\#4), as
+it is obviously not easily attained without making a number of architectural decisions.
 \begin{table}[H]
-	\resizebox{\textwidth}{!}{
-	\rowcolors{0}{white}{tableShade}
-	\begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
-    	\hline
-		\multicolumn{2}{|c|}{\textbf{Scenario \#:} 1-4} 			&	\multicolumn{3}{|c|}{\textbf{Scenario:} Clean Code} 	\\															
-		\hline
-		\multicolumn{5}{|c|}{\textbf{Attribute(s):} Modifiability} 			\\
-		\multicolumn{5}{|c|}{\textbf{Stimulus:} Wish to have good documentation and comments with code} \\
-		\multicolumn{5}{|c|}{\textbf{Response (measure):} Developers understanding the code} 		\\
-		\hline
-		\textbf{Architectural Decisions}	&   \textbf{Sensitivity}	&	\textbf{Tradeoff}	& \textbf{Risk}				& \textbf{Non-risk} \\
-		\hline
-		Backup CPU							&	S1						&	S1					&	R1						& 					\\
-		No Backup Channel					&							&	T1					& 	R4						& 					\\
-		Watchdog							&	S3						&						&							& N1 				\\
-		\hline
-		\multicolumn{5}{|c|}{\textbf{Reasoning:} Why is the chosen as a scenario, issues etc etc} \\
-		\hline
-		\multicolumn{5}{|c|}{\textbf{Architectural diagram:} An optional diagram showing how the architecture handles the scenario} \\
-		\hline
-    \end{tabular}
-	\label{tab:analysisArchitecturalApproach}}
-	\caption{Analysis of Architectural Approach}
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+      \hline
+      \multicolumn{2}{|c|}{\textbf{Scenario \#:} 3} &\multicolumn{3}{|c|}{\textbf{Scenario:} Adding NPC} \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Attribute(s):} Modifiability} \\
+      \multicolumn{5}{|c|}{\textbf{Stimulus:} Desire to introduce complexity at a later date} \\
+      \multicolumn{5}{|c|}{\textbf{Response (measure):} Should not take more than x lines of code to add new NPC} \\
+      \hline
+      \textbf{Architectural Decisions}&   \textbf{Sensitivity}&\textbf{Tradeoff}& \textbf{Risk}& \textbf{Non-risk} \\
+      \hline
+      Usage of Factory Pattern&S1&S1&R1& \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Reasoning:} Showcases important modifiability option} \\
+      \hline
+    \end{tabular}}
+\end{table}
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+      \hline
+      \multicolumn{2}{|c|}{\textbf{Scenario \#:} 4} &\multicolumn{3}{|c|}{\textbf{Scenario:} Code modularity} \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Attribute(s):} Modifiability} \\
+      \multicolumn{5}{|c|}{\textbf{Stimulus:} Clarity, easy of understanding and modification of parts without changing the whole} \\
+      \multicolumn{5}{|c|}{\textbf{Response (measure):} Changing a game feature should not affect more than x call sites} \\
+      \hline
+      \textbf{Architectural Decisions}&   \textbf{Sensitivity}&\textbf{Tradeoff}& \textbf{Risk}& \textbf{Non-risk} \\
+      \hline
+      Usage of existing framework (Sheep) &S1&S1&R1& \\
+      Usage of MVC pattern & & & & \\
+      Usage of Observer / Observed pattern & & & & \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Reasoning:} Impact on architectural decisions} \\
+      \hline
+    \end{tabular}}
+\end{table}
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+      \hline
+      \multicolumn{2}{|c|}{\textbf{Scenario \#:} 5} &\multicolumn{3}{|c|}{\textbf{Scenario:} Easily changeable UI} \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Attribute(s):} Modifiability} \\
+      \multicolumn{5}{|c|}{\textbf{Stimulus:} ``Skins'' are a normal feature of smartphone applications} \\
+      \multicolumn{5}{|c|}{\textbf{Response (measure):} Should not take more than 3 hours to add new colortheme} \\
+      \hline
+      \textbf{Architectural Decisions}&   \textbf{Sensitivity}&\textbf{Tradeoff}& \textbf{Risk}& \textbf{Non-risk} \\
+      \hline
+      Data driven definition of UI &S1&S1&R1& \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Reasoning:} Related to how Android handles external resources} \\
+      \hline
+    \end{tabular}}
+\end{table}
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+      \hline
+      \multicolumn{2}{|c|}{\textbf{Scenario \#:} 6} &\multicolumn{3}{|c|}{\textbf{Scenario:} Maximum number of screen options} \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Attribute(s):} Usability} \\
+      \multicolumn{5}{|c|}{\textbf{Stimulus:} Do not want user to be overwhelmed with information} \\
+      \multicolumn{5}{|c|}{\textbf{Response (measure):} Any option screen should contain at most x options} \\
+      \hline
+      \textbf{Architectural Decisions}&   \textbf{Sensitivity}&\textbf{Tradeoff}& \textbf{Risk}& \textbf{Non-risk} \\
+      \hline
+      Simplicity of UI &S1&S1&R1& \\
+      \hline
+      \multicolumn{5}{|c|}{\textbf{Reasoning:} Simplicity is an important design goal for the team behind the project.} \\
+      \hline
+    \end{tabular}}
 \end{table}
