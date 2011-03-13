@@ -1,0 +1,25 @@
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{
+	\rowcolors{0}{white}{tableShade}
+	\begin{tabular}{| c | p{3cm} | p{3cm} | p{3cm} | p{3cm} |}
+    	\hline
+		\multicolumn{2}{|c|}{\textbf{Scenario \#:} 1-4} 			&	\multicolumn{3}{|c|}{\textbf{Scenario:} Clean Code} 	\\															
+		\hline
+		\multicolumn{5}{|c|}{\textbf{Attribute(s):} Modifiability} 			\\
+		\multicolumn{5}{|c|}{\textbf{Stimulus:} Wish to have good documentation and comments with code} \\
+		\multicolumn{5}{|c|}{\textbf{Response (measure):} Developers understanding the code} 		\\
+		\hline
+		\textbf{Architectural Decisions}	&   \textbf{Sensitivity}	&	\textbf{Tradeoff}	& \textbf{Risk}				& \textbf{Non-risk} \\
+		\hline
+		Backup CPU							&	S1						&	S1					&	R1						& 					\\
+		No Backup Channel					&							&	T1					& 	R4						& 					\\
+		Watchdog							&	S3						&						&							& N1 				\\
+		\hline
+		\multicolumn{5}{|c|}{\textbf{Reasoning:} Why is the chosen as a scenario, issues etc etc} \\
+		\hline
+		\multicolumn{5}{|c|}{\textbf{Architectural diagram:} An optional diagram showing how the architecture handles the scenario} \\
+		\hline
+    \end{tabular}
+	\label{tab:analysisArchitecturalApproach}}
+	\caption{Analysis of Architectural Approach}
+\end{table}
