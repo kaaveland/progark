@@ -1,0 +1,42 @@
+-- Clean code
+Source			:  
+Stimulus		:
+Environ			:
+Artefact		:
+Response		:
+Response measure: At least X% comment coverage
+				: Use checkstyle or similar to measure accordance to rules
+
+-- Maximum # screen options
+Source			:
+Stimulus		:
+Environ			:
+Artefact		:
+Response		:
+Response measure: Any UI screen should contain at most X selectable options
+
+-- Complexity of game
+Source			:  
+Stimulus		:
+Environ			:
+Artefact		:
+Response		:
+Response measure: Less than X clicks to start game
+
+-- NPC
+Source			: 
+Stimulus		:
+Environ			:
+Artefact		:
+Response		:
+Response measure: Factory pattern.  Should not req more than X loc to add
+new npc type.
+
+-- Code modularity
+Source			:  
+Stimulus		:
+Environ			:
+Artefact		:
+Response		:
+Response measure: Change to game features should not affect more than X
+call sites.
