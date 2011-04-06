@@ -1,5 +1,6 @@
 Intro on how we tested (this is only func testing, so random test dude + given a test is OK, or a dev test)
 
+\subsection{Functional Requirements}
 
 \begin{table}[H]
 	\resizebox{\textwidth}{!}{
@@ -346,4 +347,123 @@ Intro on how we tested (this is only func testing, so random test dude + given a
 		\textbf{Final Verdict}	& 	Passed \\
     \end{tabular}
 	\label{tab:testfunctional20}}
+\end{table}
+
+\subsection{Quality Requirements}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID: QR1} 				& Developers wants to add hero  \\
+      \hline
+      \textbf{Environment:} 		&  Design time \\
+      \textbf{Artifact:} 			& Code \\
+      \textbf{Response:} 			& Adds code for hero \\
+      \textbf{Response Measure:} 	& Code modification takes place only in trigger and ability code\\
+	  \textbf{Observed response:} 	& XXXX \\
+      \hline
+	  \textbf{Evaluation:}
+    \end{tabular}
+    \label{tab:implquality1}}
+\end{table}
+
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID: QR2} 				& Developer wants to add new game-mode  \\
+      \hline
+      \textbf{Environment} 			&  Design time \\
+      \textbf{Artifact} 			& Code \\
+      \textbf{Response} 			& Adds code for new game-mode \\
+      \textbf{Response Measure} 	& No code modification required except in menusystem\\ 
+	  \textbf{Observed response:} 	& XXXX \\
+      \hline
+	  \textbf{Evaluation:}
+    \end{tabular}
+    \label{tab:implquality2}}
+\end{table}
+
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID: QR3} 				& Designer wants to change hero sprite  \\
+      \hline
+      \textbf{Environment} 			&  After compile time \\
+      \textbf{Artifact} 			& Hero data \\
+      \textbf{Response} 			& Old sprite replaced with new sprite \\
+      \textbf{Response Measure} 	& Takes no more than 2 minutes and no
+      								code modification or recompilation required \\
+      \hline
+	  \textbf{Observed response:} 	& XXXX \\
+      \hline
+	  \textbf{Evaluation:}
+    \end{tabular}
+    \label{tab:implquality3}}
+\end{table}
+
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID: QR4} 				& Game Designer wants to adjust unbalanced hero  \\
+      \hline
+      \textbf{Environment}			&  After compile time \\
+      \textbf{Artifact} 			& Hero data \\
+      \textbf{Response} 			& Hero damage and other stats adjusted \\
+      \textbf{Response Measure} 	& Game ready to test new hero stats without
+      								requiring code modification or recompilation \\
+	  \textbf{Observed response:} 	& XXXX \\
+      \hline
+	  \textbf{Evaluation:}
+    \end{tabular}
+    \label{tab:implquality4}}
+\end{table}
+
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID: QR5} 				& Player wants to learn the game controls  \\
+      \hline
+      \textbf{Environment} 			& Runtime \\
+      \textbf{Artifact} 			& Game \\
+      \textbf{Response} 			& Game starts and player plays \\
+      \textbf{Response Measure} 	& It takes no longer than 3 minutes before
+      								the player is able to control and attack with the hero \\
+	  \textbf{Observed response:} 	& XXXX \\
+      \hline
+	  \textbf{Evaluation:}
+    \end{tabular}
+    \label{tab:implquality5}}
+\end{table}
+
+\begin{table}[H]
+  \resizebox{\textwidth}{!}{
+    \rowcolors{0}{white}{tableShade}
+    \begin{tabular}{p{5cm} | p{12cm}}
+      \hline
+      \textbf{ID: QR6} 				& 2 or more players want to play  \\
+      \hline
+ 	  \textbf{Environment} 			& Runtime \\
+      \textbf{Artifact} 			& Menusystem \\
+      \textbf{Response}				& Game starts multiplayer mode \\
+      \textbf{Response Measure} 	& It takes less than 5 keypresses per
+      								player to get started. \\
+	  \textbf{Observed response:} 	& XXXX \\
+      \hline
+	  \textbf{Evaluation:}
+    \end{tabular}
+    \label{tab:implquality6}}
 \end{table}
