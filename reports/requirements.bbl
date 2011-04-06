@@ -1,0 +1,37 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 0.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{XNADEV}{misc}{}
+  \name{author}{1}{%
+    {{Microsoft}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{http://msdn.microsoft.com/en-sg/xna}}
+  \field{note}{Version 2010.02.25}
+  \field{title}{XNA Development Center}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

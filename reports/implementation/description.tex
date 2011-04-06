@@ -1,0 +1,37 @@
+
+\begin{table}[h]
+	\rowcolors{1}{white}{tableShade}
+	\centering
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{ c  c  c }
+    \textbf{Module} 		& \textbf{Name}  	& \textbf{Description}													\\ 
+	\hline
+	ProgarkSpillContent		&	PSC				&	Models for stored data												\\
+	ProgarkSpill.Game		&	Game1			&	Entrypoint for application (required by XNA)						\\
+	ProgarkSpill.GameState	&	GameState		&														\\
+	ProgarkSpill.MenuState	&	MenuState		&	
+	ProgarkSpill.PauseState &	PauseState		&	 
+   	ProgarkSpill.GameStateStack	& GSS			& 	Controls the states 			\\
+	ProgarkSpill.Controller	& 					&	Gamepad Layer					\\
+	ProgarkSpill.Renderer
+	ProgarkSpill.Viewport
+	ProgarkSpill.GameObjects
+
+
+
+
+ 	SoftwareDb 			& Storage1 			& Data access module  													\\ 
+    VehicleDbStorage 	& Storage2 			& Data access module 													\\ 
+    GarageDbStorage 	& Storage4 			& Data access module 													\\ 
+    Model 				& MS-model 			& Contains the model-POJOs used by the other modules 					\\ 
+    SoftwarePanel 		& GUI1 				& GUI code for user interaction with new software. 						\\ 
+    ECUPanel 			& GUI2 				& GUI code for ECU-software binding 									\\ 
+    NewVehiclePanel 	& GUI3 				& GUI code creating new vehicle configurations 							\\ 
+    RecallPanel 		& GUI4 				& GUI code used to make recalls 										\\ 
+    VehiclePanel 		& GUI5 				& GUI code used by the garage 											\\ 
+    Net 				& Ms-Net 			& Contains network code responsible for enabling the interoperability  	\\ 
+	\hline
+    \end{tabular}}
+	\label{tab:systemDescriptionTabell}
+	\caption{SOCAM: System description}
+\end{table}

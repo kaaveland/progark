@@ -1,0 +1,37 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 0.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{unity}{misc}{}
+  \name{author}{1}{%
+    {{Technologies}{T.}%
+     {Unity}{U.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TU1}
+  \strng{fullhash}{TU1}
+  \field{sortinit}{T}
+  \field{howpublished}{\url{hhttp://unity3d.com/}}
+  \field{note}{Version 2010.02.27}
+  \field{title}{Unity: Game Development Tool}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

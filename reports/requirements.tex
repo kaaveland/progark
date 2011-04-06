@@ -4,23 +4,34 @@
 \usepackage[hmargin=2.54cm,vmargin=1.91cm]{geometry}
 \usepackage{parskip}
 \usepackage{wrapfig}
-% TableMagic+shading
 \usepackage{multirow}
 \usepackage[english]{babel}
 \usepackage{longtable}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
+\usepackage{biblatex}
+
+%	-- Some important declarations --
+%	-- Bibliography
+\bibliography{myrefs}
+
+%	-- Tableshade color
 \definecolor{tableShade}{HTML}{F1F5FA}
 
+%	-- Project info
 \def \project {Defense of the Guardian Gnome}
 \def \objective {guardian gnome}
 
-%\setromanfont{Century Gothic}
+%	-- Font Style (uses Xelatex engine (Unicode))
+\setromanfont{Century Gothic}
 
+%	-- Date of last run (frontpage)
 \date{\today}
 
 \begin{document}
+
+%	-- Title Page	
 \title{Requirement Specification\\
  		TDT4240 - XNA Game Project}
 
@@ -35,46 +46,37 @@
 \pagestyle{plain}
 \pagenumbering{arabic}
 
+%	-- Actual report
 \section{Introduction}
-\subsection{About this document}
-\input{requirements/introduction}
+	\subsection{About this document}
+		\input{requirements/introduction}
 
 \subsection{Concepts and ideas}
-\label{concepts}
-\input{requirements/concepts}
+	\label{concepts}
+	\input{requirements/concepts}
 
 \section{Functional Requirements}
-\label{funcreq}
-\input{requirements/functionalRequirements}
-
+	\label{funcreq}
+	\input{requirements/functionalRequirements}
 
 \section{Quality Requirements}
-\label{qualreq}
-\input{requirements/qualreq}
+	\label{qualreq}
+	\input{requirements/qualreq}
 
 \section{COTS Components}
-\label{components}
-\input{requirements/components}
+	\label{components}
+	\input{requirements/components}
 
 \section{Constraints}
-\label{constraints}
-\input{requirements/constraints}
-
-\section{References}
-\begin{itemize}
-  \item Microsoft, ``XNA Developer Center'', accessed 25. February 2011
-\end{itemize}
+	\label{constraints}
+	\input{requirements/constraints}
 
 \section{Issues}
-We are still very vague on many details regarding our game concept. For example,
-we are not sure whether the goal should be just survival for as long as possible,
-effectively making the game score-driven and impossible to actually beat. In a
-case like this, it makes no sense to have an object to defend.
+	\label{issues}
+	\input{requirements/issues}
 
-Whether to use maps at all, or to have a single everchanging map is also something
-we haven't decided on. If the game was to be set in a space-setting, it would
-make sense for obstacles to be moving around whereas that wouldn't make much sense
-in a fantasy setting. 
+\printbibliography
+
 
 \section{Revision history}
 
@@ -87,3 +89,4 @@ in a fantasy setting.
 \end{table}
 
 \end{document}
+	\bibliographystyle{plainnat}
