@@ -1,37 +1,19 @@
 
-\begin{table}[h]
-	\rowcolors{1}{white}{tableShade}
-	\centering
-	\resizebox{\textwidth}{!}{
-	\begin{tabular}{ c  c  c }
-    \textbf{Module} 		& \textbf{Name}  	& \textbf{Description}													\\ 
-	\hline
-	ProgarkSpillContent		&	PSC				&	Models for stored data												\\
-	ProgarkSpill.Game		&	Game1			&	Entrypoint for application (required by XNA)						\\
-	ProgarkSpill.GameState	&	GameState		&														\\
-	ProgarkSpill.MenuState	&	MenuState		&	
-	ProgarkSpill.PauseState &	PauseState		&	 
-   	ProgarkSpill.GameStateStack	& GSS			& 	Controls the states 			\\
-	ProgarkSpill.Controller	& 					&	Gamepad Layer					\\
-	ProgarkSpill.Renderer
-	ProgarkSpill.Viewport
-	ProgarkSpill.GameObjects
 
+TODO: Add detailed view of the various part of the architecture, describing how the game was designed!
 
+\begin{itemize}
+	\item \textbf{progarkSpillContent} \\ Models for stored data
+	\item \textbf{prograrkSpill.Game} \\ Entrypoint for application required by XNA
+	\item \textbf{progarkSpill.GameState : IGameState} \\ Controls that decide how application acts in different states 
+	\item \textbf{progarkSpill.MenuState : IGameState} \\ Controls that decide how application acts in different states 
+	\item \textbf{progarkSpill.PauseState : IGameState} \\ Controls that decide how application acts in different states 
+	\item \textbf{progarkSpill.GameStateStack} \\ Controls the states a game can be in		
+	\item \textbf{progargspill.Controller} \\ Xbox360 gamepad Layer
+	\item \textbf{progargspill.Renderer} \\ View functionality - renders GameState to screen 
+	\item \textbf{progargspill.Viewport} \\ View functionality - renders GameState to screen
+	\item \textbf{progarkspil.GameObjects} \\ 
+\end{itemize}
 
+Todo: Update table, add figure?
 
- 	SoftwareDb 			& Storage1 			& Data access module  													\\ 
-    VehicleDbStorage 	& Storage2 			& Data access module 													\\ 
-    GarageDbStorage 	& Storage4 			& Data access module 													\\ 
-    Model 				& MS-model 			& Contains the model-POJOs used by the other modules 					\\ 
-    SoftwarePanel 		& GUI1 				& GUI code for user interaction with new software. 						\\ 
-    ECUPanel 			& GUI2 				& GUI code for ECU-software binding 									\\ 
-    NewVehiclePanel 	& GUI3 				& GUI code creating new vehicle configurations 							\\ 
-    RecallPanel 		& GUI4 				& GUI code used to make recalls 										\\ 
-    VehiclePanel 		& GUI5 				& GUI code used by the garage 											\\ 
-    Net 				& Ms-Net 			& Contains network code responsible for enabling the interoperability  	\\ 
-	\hline
-    \end{tabular}}
-	\label{tab:systemDescriptionTabell}
-	\caption{SOCAM: System description}
-\end{table}
