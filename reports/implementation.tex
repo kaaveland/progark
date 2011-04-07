@@ -12,8 +12,16 @@
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{biblatex}
-
+\usepackage{fancyhdr}
+\usepackage{titlesec}
 %	-- Some important declarations --
+%	-- Section Header: NOTE! It renews the command 
+
+\renewcommand{\baselinestretch}{1.3}
+\definecolor{my_color}{HTML}{808080} 
+\titleformat{\section}[hang]{\sffamily\bfseries}
+{\color{my_color}\Huge\thesection}{0pt}{\linebreak\huge\raggedleft}[{\titlerule[0.5pt]}]
+
 %	-- Bibliography
 \bibliography{myrefs}
 
@@ -38,42 +46,72 @@
  		Sibte-Haider Syed\\ 
 		Robin Kåveland Hansen\\}
 \maketitle
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
+% Roman numbering until end of TOC
+\pagenumbering{roman}
+	
+% A trick to insert a empty page
+\newpage
+\thispagestyle{empty}
+\mbox{}
+% End of trick
+
+% We dont want numbering on the TOC
 \pagestyle{empty}
 \tableofcontents
 \clearpage
-\pagestyle{plain}
+
+% And now we want the normal arabic numbering!
+\pagestyle{fancy}
+\rhead{\color{my_color}\Huge\thesection}
+\lhead{}
+\renewcommand{\headrulewidth}{0pt}
 \pagenumbering{arabic}
 
+%
+% Here we can include all the real "writing"
+%
+%	\include{file} to get the firstpage for each section nice and neat <3
+
+\pagestyle{empty}
+
 \section{Introduction}
-	\input{implementation/introduction}
+\newpage
+	\include{implementation/introduction}
 
 \section{Implementation Details}
-	\input{implementation/description}
+\newpage
+	\include{implementation/description}
 	
-\section{Users Manual}
-	\input{implementation/usermanual}
-	
-\section{Test Report}
-	\input{implementation/implemented}
+\section{User manual}
+\newpage
+	\include{implementation/usermanual}
 
-\section{Test plan}
-	\input{implementation/testplan}
+\section{Test - Plan and Reporting}
+\newpage
+	\include{implementation/implemented}
 	
 \section{Relationship with the architecture}
-	TODO: Add / list inconsistencies beetween the architecture and implementation, give reason and discuss if they should
+\newpage	TODO: Add / list inconsistencies beetween the architecture and implementation, give reason and discuss if they should
 	have been discovered earlier by e.g. ATAM. (BLAME THE OTHERS!!!;)
 	Add the func reqs here?
-	\input{implementation/non_implemented}
-	
+	\include{implementation/non_implemented}
+
 \section{Problems, Issues and Points Learned}
+\newpage
 	Todo: All related to implementation; 
 	* Illness
 	* Only 3 members
 	* Time
-
+	
+	
+%\pagestyle{empty}
 \section{Revision history}
 
+%\pagestyle{fancy}
 TODO: FILL ME UP, WHAT; WHERE; WHEN; WHY!
 
 \begin{table}[H]
