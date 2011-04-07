@@ -1,0 +1,62 @@
+The game is built from the ground up to be played on the XBOX 360, but
+has limited playability on Windows-based PCs.  An XBOX controller is
+required to play this game.
+
+We only distribute the source for this game, and as such the installation
+procedure is somewhat complex, and has many prerequisites.
+
+\subsection{Installing the game}
+
+To play on PC:
+\begin{itemize}
+    \item Ensure both Visual Studio 2010 and XNA Game Studio 4.0 are installed
+    \item Open the solution \emph{progark-spill} in VS.
+    \item Build the solution (Key shortcut F6)
+    \item Run without debugging (Key shortcut Ctrl+F5)
+\end{itemize}
+
+To play on XBOX 360:
+\begin{itemize}
+    \item Follow the first three steps for PC.
+    \item Download and install \emph{XNA Creators Club} on your XBOX.
+    \item Launch XNA-CC on your XBOX, and pair with development machine.
+    \item When XNA-CC is awaiting a connection, choose \emph{Deploy} in
+          VS.
+    \item Finally, choose Run without debugging in VS.
+    \item The game is now installed, and on following launches should
+          be found in the XBOX' Game Library.
+\end{itemize}
+
+\subsection{Playing the game}
+
+In the game, you should now see the main menu. It lists all connected 
+controllers, and thus potential players. Each player that wishes to join the
+game, must press the button \emph{A} on their controller. When you are ready,
+press \emph{Start} on player ones' controller to launch the game.  You may quit 
+the game from this menu by pressing the \emph{Back} button.  This
+description has unfortunately not been added to the menu itself, due to
+time-constraints.
+
+% TODO:  Add ingame shot for context?
+You should now be playing the game. At any time you should be able to press
+the \emph{Back} button to return to the main-menu, or \emph{Start} button to
+pause the game. Pressing \emph{Back} when the game is paused returns you to
+the game.
+
+In the center of the screen you should see the objective, which you must 
+defend. You should also see a spaceship for each player which joined the game.
+You control your spaceship with the \emph{Left Stick} of your controller.
+The spaceship always faces the crosshair, which you can move around using
+your \emph{Right Stick}. You can shoot using your \emph{Right trigger}.
+
+Along the top of your screen you should see a bar, representing the time
+left of this level. When it reaches zero, and all enemies have been destroyed
+you win the level (and in the case of the demo-level, the game itself).
+Should the objective be destroyed, you lose the game.
+
+On the right edge of the screen you can see which abilities you may use.
+This UI element records the time until you can use an ability, by filling
+pieces of a pie-chart. The pies are color-coded to buttons on your controller.
+A white ring surrounding the pies means you have leveled up, and can improve
+one of your abilities.You do this by pressing the corresponding direction
+on you \emph{D-Pad}
