@@ -7,12 +7,14 @@ architecture lacking. Most of these changes were small however, and we feel
 the architecture we designed was a very good fit for what we wished to
 accomplish, and solved most of the goals we had set for ourselves.
 
-The list below shows which features we wish to highlight, and were crucial
-in implementing the architecture as we had planned it.
+It is worth noting that our main quality attribute was modifiability, and
+that most architectural decisions were made with this attribute in mind.
+The list below shows which features we wish to highlight, and were important
+parts of implementing the architecture as we had planned it.
 
 \begin{itemize}
 	\item \textbf{prograrkSpill.Game} \\
-	      Entrypoint for application required by XNA
+	      Entrypoint for application provided by XNA
 	\item \textbf{progarkSpillContent} \\
 	      Project containing all data
   	\item \textbf{progarkSpill.GameObjects} \\
@@ -20,20 +22,23 @@ in implementing the architecture as we had planned it.
   	\item \textbf{progarkSpill.GameStateStack} \\
   	      Controls the states a game can be in		
 	\item \textbf{progarkSpill.GameState : IGameState} \\
-	      Controls that decide how application acts in different states 
+	      Maintains the state of the game while playing
 	\item \textbf{progarkSpill.MenuState : IGameState} \\
-	      Controls that decide how application acts in different states 
+	      Group of states representing menus
 	\item \textbf{progargspill.Controller} \\
-	      Xbox360 gamepad Layer
+	      Xbox360 gamepad abstraction layer
 	\item \textbf{progarkSpill.Renderer} \\
-	      View functionality - renders GameState to screen 
+	      Module responsible for displaying graphics on screen
 	\item \textbf{progarkSpill.Viewport} \\
-	      View functionality - renders GameState to screen
+	      Part of renderer which allows screen-independent rendering
 \end{itemize}
+
+Each item will be described in more detail in the following sections, and
+related to the quality attributes they are involved with.
 
 \subsection{progarkSpill.Game}
 This class is added by XNA to any project, and abstracts away many details
-about the underlying architecture, and provides hooks for common functions.
+about the underlying architecture by providing hooks for common functions.
 It is optional to use, all the features used by this class are provided at
 a lower level in XNA if you need more control over how your game runs. We
 found it to be adequate for our needs, and have decided to keep it.
@@ -41,7 +46,7 @@ found it to be adequate for our needs, and have decided to keep it.
 In our project we use it for three high-level features. In the LoadContent()
 method we create our resource-management system, and initialize our rendering
 subsystem.  In the Update() method, we record time spent on the last frame, and
-use this to update the game in a time-independent manner. Finally, in the
+use this to update the game in a framerate-independent manner. Finally, in the
 Render() method, we set the state needed by the rendering-system, and then
 allow it to render the current state.
 
@@ -51,16 +56,17 @@ content-management system XNA provides, and allows you to add resources and set
 properties on these.
 
 XNA allows you to add quite a few kinds of resources, such as graphics, sound, 
-XML and more. We use three of these features, Graphics, Fonts and XML. One
+XML and more. We use three of these features, graphics, fonts and XML. One
 drawback of this method of adding content is that you need to rebuild the
 project whenever you add content. XNA does this to allow compression and 
 bundling data which can then be sent to the XBOX. This does however free us
 from interacting with the XBOX' file system, and we feel it is a fair tradeoff.
 
 \subsection{progarkSpill.GameObjects}
-The GameObjects package implements what we have called the \emph{Component-
-Based System} in our architecture. It is a very flexible system, which allows
-us to reuse much of the games' functionality in different places, allows us
+The GameObjects package implements what we have called the 
+\emph{Component-Based System} in our architecture. It is a very flexible 
+system, which allows
+us to reuse much of the game's functionality in different places, allows us
 to compose new features with minimum code changes and is an integral part of
 our data-driven approach to coding.
 
@@ -93,8 +99,8 @@ world.
 First the player. The important thing to note here is that the player is no
 different from a hostile in the game. Sure they have more health and better
 weapons (which are defined in data), but they follow the same rules as 
-everybody. We do this by creating a custom behaviour for players which read the
-state of the XBOX controller. This then directs the players entity, which
+everybody. We do this by creating a custom behaviour for players which reads 
+the state of the XBOX controller. This then directs the players entity, which
 updates just as if it were any other creep.
 
 The other example we wish to highlight is creep-spawners. These are responsible
@@ -103,16 +109,17 @@ to players (They could however be made visible, for instance creeps might be
 deployed from a carrier). In terms of functionality they are as far removed 
 from players as one could possibly come, but are still implemented using the
 same base classes.  A creep-spawner is an entity whose only ability is to spawn
-hostiles. The quite literally shoot hostiles into the world (using the exact
+hostiles. They quite literally shoot hostiles into the world (using the exact
 same code that players use to shoot their main cannon)
 
 \subsection{progarkspill.GameStateStack}
 A game usually has different phases, such as showing a splash-screen, menus and
 obviously playing the game itself. We wanted these features, and asked 
 ourselves how we could do this as elegantly as possible.  Our first solution
-was to implement an event-system which would queue state-changes and change
-states transparently to the states. We decided early on however that we were
-over-engineering the problem, and changed this to a simple stack of states.
+was to design an event-system which would queue state-changes and apply these
+changes transparently to the states themselves. We decided early on however 
+that we were over-engineering the problem, and changed this to a simple stack 
+of states.
 
 Each state has access to this stack, and can add or remove new states. We then
 call methods on the top element of the stack, and everything works out neatly.
@@ -121,7 +128,8 @@ which can lead into another state must know of the other state. An example is
 the main menu which must know of the in-game state in order to start the game.
 This would be avoided by using the aforementioned event-system, but we feel
 our current system works well enough, and the downsides are small compared to
-the extreme simplicity of this system.
+the extreme simplicity of this system. As the program starts we populate the
+stack with the menu, and we quit the game when the stack is empty.
 
 \subsection{progarkSpill.GameState}
 This class represents the state of being in the playable portion of the game. 
@@ -136,13 +144,13 @@ everything and can do anything, which plagues many game architectures.
 This is the one thing in our project which we are truly unhappy with, and the
 first thing to be revised if we had more time to do it. There is not a single
 redeeming feature to having a large monolithic class with such disparate
-responsibilities, aside from the fact that it is incredibly easy and a quick
+responsibilities, aside from the fact that it is an incredibly easy and quick
 solution.
 
 \subsection{progarkSpill.MenuState}
 This is a group of classes which represents the different menus in the game.
-While they are simple and powerful, we do wish we could make these more data-
-driven, and perhaps a lot more pretty.
+While they are simple and powerful, we do wish we could make these more
+data-driven, and perhaps a lot more pretty in terms of graphics.
 
 Each class has two methods which implements most of the functionality of that
 menu. A total of four menus were implemented, the main menu, two menus 
@@ -151,7 +159,7 @@ displayed  after winning or losing the game, and a pause-menu.
 \subsection{progarkSpill.Controller}
 This is a single class containing nothing but static methods and members. It
 was created as a layer of abstraction above XNAs similar GamePad class, but
-contains one more features we needed for our game, namely tracking the time a
+contains one more feature we needed for our game, namely tracking the time a
 certain button was pressed. It would also be the place any other controller-
 related features were added. This class resembles the \emph{Singleton-pattern}
 closely, in that it provides global access and a single point of responsibility
