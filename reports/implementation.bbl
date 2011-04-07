@@ -16,6 +16,36 @@
   {}
 \endgroup
 
+\entry{deploy}{misc}{}
+  \name{author}{1}{%
+    {{Microsoft}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{http://msdn.microsoft.com/en-us/library/bb975643.aspx}}
+  \field{note}{Version 2011.04.07}
+  \field{title}{Unity: Game Development Tool}
+\endentry
+
+\entry{troubleshoot}{misc}{}
+  \name{author}{1}{%
+    {{Microsoft}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{http://msdn.microsoft.com/en-us/library/bb976062.aspx}}
+  \field{note}{Version 2011.04.07}
+  \field{title}{Unity: Game Development Tool}
+\endentry
+
 \lossort
 \endlossort
 
