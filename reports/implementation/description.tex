@@ -70,8 +70,21 @@ us to reuse much of the game's functionality in different places, allows us
 to compose new features with minimum code changes and is an integral part of
 our data-driven approach to coding.
 
+This package implements the component-pattern, which was originally created
+for use in the Unit3d framework \cite{unity}. Our implementation is largely
+inspired by Bob Nystrom's description \cite{component}.
+
 Understanding this package is best done by looking at the \emph{Entity} class,
 but we will highlight some possibilities the system opens for us.
+
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[scale=1]{graphics/entity}
+    \caption{The components of the entity class}
+    \label{fig:entity}
+    \end{center}
+\end{figure}
 
 In short, everything you see on the screen, and quite a few things you don't
 see, are implemented as Entities. Each entity is a container for different
@@ -90,6 +103,30 @@ system was modifiability, but there were some tradeoffs which had to be made.
 The system is complex, and takes some time to understand. Complex code hinders
 maintainability, which is closely related to modifiability. The endless 
 possibilities of this system however far outweigh the downsides.
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=\linewidth]{graphics/abilities}
+    \caption{The Ability interface and implementing classes}
+    \label{fig:abilities}
+    \end{center}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=\linewidth]{graphics/behaviours}
+    \caption{The Behaviour interface and implementing classes}
+    \label{fig:behaviours}
+    \end{center}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[width=\linewidth]{graphics/statuses}
+    \caption{The Status interface and implementing classes}
+    \label{fig:statuses}
+    \end{center}
+\end{figure}
 
 To show just how flexible this system is, we will go through how two integral
 features from the game were implemented using this system. They are the players
