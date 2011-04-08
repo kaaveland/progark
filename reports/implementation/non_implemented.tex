@@ -1,6 +1,18 @@
 \subsection{Functional Requirements that were not implemented}
 
-Blabla DISCUSSIOn
+We were not able to implement all our functional requirements, the reasons
+being lack of time. The features which were dropped rely heavily on
+content-production and would require quite some time to polish and balance in
+terms of gameplay.
+
+The architecture itself could handle these additions with
+little work, but we simply didn't have the time to add these features.
+No amount of planning could have detected this problem, and we feel there
+was little in the architecture process which would account for such problems.
+
+Below is a list of the features which were not implemented, along with a short
+description of what we wished to achieve, and the reason it was left out.
+
 
 \begin{table}[H]
 	\resizebox{\textwidth}{!}{
@@ -22,6 +34,16 @@ Blabla DISCUSSIOn
 	\label{tab:functional10}}
 \end{table}
 
+Resources were intended as a bonus, in order to allow players to grow stronger
+as the game progressed. In a sense we did this by adding a leveling mechanism,
+but this was already a separate requirement. We had envisioned the resources
+as metal / credits which were dropped by hostiles as they died, and used by
+the player to purchase upgraded equipment from a store.
+
+We realized soon that implementing this feature would be simple, but creating
+art assets and balancing the stats of each item would require much more time
+than we had available. Due to this the feature was scrapped quite early in the
+implementation.
 
 \begin{table}[H]
 	\resizebox{\textwidth}{!}{
@@ -41,6 +63,9 @@ Blabla DISCUSSIOn
 	\label{tab:functional16}}
 \end{table}
 
+This requirement is a natural extension of \emph{FR10}, and when that was 
+dropped this requirement has to be dropped alongside it.
+
 \begin{table}[H]
 	\resizebox{\textwidth}{!}{
 	\rowcolors{0}{white}{tableShade}
@@ -59,4 +84,11 @@ Blabla DISCUSSIOn
 	\label{tab:functional18}}
 \end{table}
 
+Passive abilities would be of the kind \emph{Increase teams health 
+regeneration} or \emph{Reduce hostiles damage resistance}.  These effects can
+be added with the current architecture as abilities which can always be 
+triggered (i.e. without cooldowns).
 
+This feature was scrapped due to time-constraints, but would require very 
+little change to code to be implemented. Once again we were reaching too high
+for a project running over four weeks.
