@@ -141,7 +141,7 @@ the biggest issue in our view, and therefore deserving some extra focus.
 
 \begin{figure}
     \begin{center}
-    \includegraphics[width=\linewidth]{graphics/ingame}
+    \includegraphics[width=\linewidth]{graphics/negMap}
     \caption{Negative causal map}
     \label{fig:negmap}
     \end{center}
@@ -174,16 +174,37 @@ but we want to highlight it in any case.
 
 \begin{figure}
     \begin{center}
-    \includegraphics[width=\linewidth]{graphics/ingame}
+    \includegraphics[width=\linewidth]{graphics/posMap}
     \caption{Positive causal map}
-    \label{fig:poskjmap}
+    \label{fig:posmap}
     \end{center}
 \end{figure}
 
+The system is our implementation of the well-known component-pattern from
+the game industry. It has been implemented in AAA titles such as Prototype,
+and is the basis for Unity3D, one of the most popular game engines today.
 
+The architecture saved us incredible amounts of time when we had laid down
+the basis. We could implement new features in a single function, and could
+compose new features in data. This was a big boon to productivity.
+
+We chose this approach because it is similar in style to functional 
+programming, which the team have had good experiences with. It also saves
+us from the dreaded \emph{God-object} which plagues many game 
+architectures.
 
 \section{Our experience of the PMA process}
 
+The PMA got us thinking about our project from a non-code viewpoint, which
+we needed. This was due to the fact that the diagrams were ill-suited to
+implementation, and forced us to think along different lines.
+
+The process was new and unexpected, but we feel that the graphical aids
+(ie. KJ-diagrams and Causal maps) added complexity we could do without.
+They are a lot of work, and a simple free-flowing discussion with a stated
+purpose would work just as well.  The diagrams are also a poor method of
+communicating ideas, and would be worthless without this document explain
+the process which produced them.
 
 \printbibliography
 
