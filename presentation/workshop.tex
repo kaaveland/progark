@@ -3,13 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usetheme{ntnuenglish}
-\usepackage[norsk]{babel}
+\usepackage[english]{babel}
 \usepackage[pdftex]{graphicx}
 \usepackage{sidecap}
 
 \title{TDT4240: Component-based Game Engine}
 
-\author[finnrobi, sibtehai, tornes]{Sibte Haider-Syed\\
+\author[finnrobi, sibtehai, tornes]{Sibte-Haider Syed\\
   Dag Øyvind Tornes\\
   Robin Kåveland Hansen}
 
@@ -52,6 +52,14 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Commit activity by day and hour}
+  \begin{figure}
+    \includegraphics[scale=0.35]{activity}
+    \caption{Size of circle = number of commits in timeslot}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
   \frametitle{Project structure}
   3 separate Visual Studio projects\\
   \begin{itemize}
@@ -59,12 +67,13 @@
     \item Models (Describes data formats for XNA)
     \item Data (XML data files, sprites)
   \end{itemize}
-  Used Git for Version Control of all projects
+  Used Git for Version Control of all projects\\
+  Visual Studio Plugin: Git Extensions
 \end{frame}
 
 \begin{frame}
   \frametitle{Architectural solution}
-  %\includegraphics{some_class_diagram}
+  \includegraphics[scale=0.5]{classes}
 \end{frame}
 
 \begin{frame}
@@ -101,7 +110,8 @@
       \end{itemize}
     \item Could script bosses / enemies at runtime...
     \item Levels and enemies are data, easy to create new
-    \item Little code modification to add features
+    \item Add many cool abilities
+    \item Script some bosses
     \item Allow for savegame by serializing entities...
     \item Create some actual art
     \item Add sounds

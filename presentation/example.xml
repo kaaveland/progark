@@ -5,7 +5,7 @@
     <Speed>100</Speed>
     <Abilities>
       <Item>
-	<!-- Game engine dynamically creates instance of classes -->
+	<!-- Class that controls how ability works -->
         <AbilityTypeName>CreepAutoAttack</AbilityTypeName>
 	<!-- Stats associated with ability -->
         <AbilityStatsAsset>AbilityStats/EnergyCreep</AbilityStatsAsset>
